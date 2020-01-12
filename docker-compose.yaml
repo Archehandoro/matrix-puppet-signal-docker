@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+  matrix-signal:
+    container_name: matrix-signal
+    image: icewind1991/matrix-puppet-signal-docker
+    restart: always
+    volumes:
+      - ./config.json:/conf/config.json
+      - ./signal-registration.yaml:/conf/signal-registration.yaml
+      - ./data:/data
+
+networks:
+  default:
+    external:
+      name: matrix
+
