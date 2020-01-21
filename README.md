@@ -19,9 +19,9 @@ Docker image for matrix-puppet-signal. Fork from icewind1991/matrix-puppet-signa
 - Run the bridge with docker-compose from the repository.
 - In the playbook, navigate to roles/matrix-synapse/defaults/main.yml and in variables matrix_synapse_container_additional_volumes: and matrix_synapse_container_additional_volumes: enter the following info:
 
-matrix_synapse_container_additional_volumes: - {"src": "/matrix/bridge-signal/config/signal-registration.yaml", "dst": "/signal-registration.yaml", "options": "ro"}
+`matrix_synapse_container_additional_volumes: - {"src": "/matrix/bridge-signal/config/signal-registration.yaml", "dst": "/signal-registration.yaml", "options": "ro"}`
 
-matrix_synapse_container_additional_volumes: - {"src": "/matrix/bridge-signal/config/signal-registration.yaml", "dst": "/signal-registration.yaml", "options": "ro"}
+`matrix_synapse_container_additional_volumes: - {"src": "/matrix/bridge-signal/config/signal-registration.yaml", "dst": "/signal-registration.yaml", "options": "ro"}`
 
 - Please note that the - before { in both values is included.
 - Restart the playbook.
