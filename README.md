@@ -1,6 +1,6 @@
 # matrix-puppet-signal-docker
 
-Docker image for matrix-puppet-signal. Fork from icewind1991/matrix-puppet-signal-docker and based on matri-hacks/matrix-puppet-signal. You will need an iOS or Android device to link Signal to the bridge. Make 
+Docker image for matrix-puppet-signal. Fork from icewind1991/matrix-puppet-signal-docker and based on matrix-hacks/matrix-puppet-signal. You will need an iOS or Android device to link Signal to the bridge. Make 
 
 ## Usage
 
