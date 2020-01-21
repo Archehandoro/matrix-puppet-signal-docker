@@ -1,6 +1,6 @@
 # matrix-puppet-signal-docker
 
-Docker image for matrix-puppet-signal. Fork from icewind1991/matrix-puppet-signal-docker and based on matrix-hacks/matrix-puppet-signal. You will need an iOS or Android device to link Signal to the bridge. Make 
+Docker compose file for matrix-puppet-signal. Fork from icewind1991/matrix-puppet-signal-docker image that is based on matrix-hacks/matrix-puppet-signal. You will need an iOS or Android device to link Signal to the bridge. Make 
 
 ## Usage
 
@@ -14,7 +14,9 @@ Docker image for matrix-puppet-signal. Fork from icewind1991/matrix-puppet-signa
 
 ## Usage with spantaleev/docker-ansible-matrix-deploy
 
-- Create directories /matrix/bridge-signal/config/ and /matrix/bridge-signal/data as per the docker-compose file structure. You can change this, but decided to go this way for ease of use and potential integration with the Ansible playbook from spantaleev. Make sure the files have matrix:matrix as owner.
+- When you completed the steps above, the whole process will create data/ directory. Put its contents in /matrix/bridge-signal/data/ 
+- Create directory /matrix/bridge-signal/config/ as per the docker-compose file structure. You can change this, but decided to go this way for ease of use and potential integration with the Ansible playbook from @spantaleev.
+- Make sure the files have matrix:matrix as owner.
 - Copy config.json and signal-registration.yaml onto /matrix/bridge-signal/config/ Also double check that ownership of the file is matrix:matrix
 - Run the bridge with docker-compose from the repository.
 - In the playbook, navigate to roles/matrix-synapse/defaults/main.yml and in variables matrix_synapse_container_additional_volumes: and matrix_synapse_container_additional_volumes: enter the following info:
