@@ -23,7 +23,7 @@ Docker compose file for matrix-puppet-signal. Fork from icewind1991/matrix-puppe
 
 `matrix_synapse_container_additional_volumes: - {"src": "/matrix/bridge-signal/config/signal-registration.yaml", "dst": "/signal-registration.yaml", "options": "ro"}`
 
-`matrix_synapse_container_additional_volumes: - {"src": "/matrix/bridge-signal/config/signal-registration.yaml", "dst": "/signal-registration.yaml", "options": "ro"}`
+`matrix_synapse_app_service_config_files: - /signal-registration.yml`
 
 - Please note that the - before { in both values is included.
 - Restart the playbook.
