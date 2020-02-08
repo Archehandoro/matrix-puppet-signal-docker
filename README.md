@@ -7,7 +7,7 @@ Docker compose file for matrix-puppet-signal. Fork from icewind1991/matrix-puppe
 - Download the [sample config](https://github.com/matrix-hacks/matrix-puppet-signal/blob/master/config.sample.json)
 - Fill in your personal config and rename to `config.json`
 - Start signal link process `docker run -it --rm -v $(pwd)/config.json:/conf/config.json -v $(pwd)/data:/data icewind1991/matrix-puppet-signal-docker link`
-- Scan the QR code with signal on your phone to finish registration. In job 136 after linking the device, the image will freeze. You can safely exit with Ctrl+C.
+- Scan the QR code with signal on your phone to finish registration. In job 138 after linking the device, make sure the line registration done appears, the image will freeze. You can safely exit with Ctrl+C.
 - Generate `signal-registration.yaml` using `docker run -it --rm -v $(pwd)/config.json:/conf/config.json icewind1991/matrix-puppet-signal-docker registration "http://matrix-signal:8090"`
 - The output of `signal-registration.yaml` will appear on console. Copy it and create a signal-registration.yaml file on the same directory.
 - Run the container with `docker run -it -v $(pwd)/config.json:/conf/config.json icewind1991/matrix-puppet-signal-docker`
